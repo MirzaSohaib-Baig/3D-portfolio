@@ -124,7 +124,7 @@ const experiences = [
     company_name: "Dimensional Sys",
     icon: dimensionalsys,
     iconBg: "#383E56",
-    date: "October 2023 - August 2024",
+    date: "December 2023 - September 2024",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
