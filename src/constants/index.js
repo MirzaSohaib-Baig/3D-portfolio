@@ -3,9 +3,6 @@ import {
   backend,
   creator,
   web,
-  javascript,
-  html,
-  css,
   reactjs,
   redux,
   tailwind,
@@ -27,6 +24,9 @@ import {
   karmaauravideo,
   toclinic,
   toclinicvideo,
+  git,
+  typescript,
+  postgresql,
 } from "../assets";
 
 export const navLinks = [
@@ -65,14 +65,6 @@ const services = [
 
 const technologies = [
   {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
-  {
     name: "Python",
     icon: python,
   },
@@ -81,8 +73,8 @@ const technologies = [
     icon: fastapi,
   },
   {
-    name: "JavaScript",
-    icon: javascript,
+    name: "TypeScript",
+    icon: typescript,
   },
   {
     name: "React JS",
@@ -105,6 +97,10 @@ const technologies = [
     icon: mongodb,
   },
   {
+    name: "PostgreSQL",
+    icon: postgresql,
+  },
+  {
     name: "WordPress",
     icon: wordpress,
   },
@@ -115,6 +111,9 @@ const technologies = [
   {
     name: "docker",
     icon: docker,
+  },
+  {    name: "git",
+    icon: git,
   },
 ];
 
@@ -137,9 +136,9 @@ const experiences = [
     company_name: "Deque Tech",
     icon: dequetech,
     iconBg: "#E6DEDD",
-    date: "October 2024 - Present",
+    date: "October 2024 - January 2025",
     points: [
-      "I am Working as a freelance full stack developer for this company.",
+      "Contract-based full stack developer for this company.",
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
       "Implementing responsive design and ensuring cross-browser compatibility.",
@@ -147,14 +146,14 @@ const experiences = [
     ],
   },
   {
-    title: "Web Developer",
+    title: "Frontend Developer",
     company_name: "Vapour AI",
     icon: vapourai,
     iconBg: "#383E56",
-    date: "Jan 2025 - Present",
+    date: "January 2025 - March 2025",
     points: [
-      "I am Working as a freelance web developer for this company.",
-      "Developing and maintaining web applications using React.js and other related technologies.",
+      "Contract-based frontend developer for this company.",
+      "Developing frontend web applications using HTML, CSS, and JavaScript for Flask Template.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
       "Implementing responsive design and ensuring cross-browser compatibility.",
       "Participating in code reviews and providing constructive feedback to other developers.",

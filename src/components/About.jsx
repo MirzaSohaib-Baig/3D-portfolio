@@ -45,13 +45,15 @@ const About = () => {
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
+        className='mt-4 text-secondary text-[17px]  leading-[30px]'
       >
-        I'm a skilled software engineer with experience in TypeScript, Python, Java, Wordpress and
-        JavaScript, and expertise in frameworks like React, FastAPI, Flask, Django, Node.js, and
-        Next.js. I'm a quick learner and collaborate closely with clients to
-        create efficient, scalable, and user-friendly solutions that solve
-        real-world problems. Let's work together to bring your ideas to life!
+Need a developer who delivers fast, scalable, and business-focused results? I’m here to make it happen.
+
+I’m a skilled software engineer experienced in TypeScript, Python, JavaScript, HTML, CSS, and WordPress. I build high-performance applications using React, Vue.js, FastAPI, Flask, Node.js, and Express.js.
+
+I work with PostgreSQL, MySQL, and MongoDB using ORMs like Sequelize and SQLAlchemy, and I leverage tools like Selenium, Playwright, Git, and Linux to ensure smooth automation, testing, and deployment.
+
+If you're looking for someone who understands your vision and turns it into a powerful, user-friendly product—let’s build it together.
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10'>
