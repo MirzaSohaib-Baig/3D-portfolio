@@ -27,6 +27,8 @@ import {
   git,
   typescript,
   postgresql,
+  haris,
+  rimmel,
 } from "../assets";
 
 export const navLinks = [
@@ -164,29 +166,22 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+      "Sohaib built the core of our Karma Aura platform flawlessly. His integration of OpenAI, HeyGen, and Aryshare made content creation and publishing incredibly smooth. A truly reliable developer.",
+    name: "Syed Muhammad Haris",
+    designation: "CEO",
+    company: "Deque Tech",
+    image: haris,
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+      "The frontend of AI Matchic came out clean, smooth, and fully responsive thanks to Sohaib. He took a simple template and delivered a polished user experience. Highly recommended!",
+    name: "Syed Muhammad Rimmel Asghar",
+    designation: "CEO",
+    company: "Vapour AI",
+    image: rimmel,
   },
 ];
+
 
 const projects = [
   {

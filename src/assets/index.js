@@ -47,6 +47,9 @@ import aipsychologistvideo from "./videos/aipsychologist.mp4";
 import karmaauravideo from "./videos/karmaaura.mp4";
 import toclinicvideo from "./videos/toclinic.mp4";
 
+import haris from "./clients/client 1.jpg";
+import rimmel from "./clients/client 2.jpg";
+
 export {
   logo,
   backend,
@@ -90,5 +93,7 @@ export {
   aigeniusvideo,
   aipsychologistvideo,
   karmaauravideo, 
-  toclinicvideo
+  toclinicvideo,
+  haris,
+  rimmel,
 };
