@@ -44,7 +44,7 @@ const ProjectCard = ({
             <img
               src={image}
               alt='project_media'
-              className='w-full h-[180px] object-cover rounded-2xl transition-opacity duration-300'
+              className='w-full h-[230px] object-cover rounded-2xl transition-opacity duration-300'
             />
           
           
