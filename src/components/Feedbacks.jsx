@@ -1,66 +1,38 @@
-import React from "react";
-import { motion } from "framer-motion";
+import { FadeIn, SectionHeader } from "./shared";
+import { 
+  testimonials
+ } from "../constants";
 
-import { styles } from "../styles";
-import { SectionWrapper } from "../hoc";
-import { fadeIn, textVariant } from "../utils/motion";
-import { testimonials } from "../constants";
-
-const FeedbackCard = ({
-  index,
-  testimonial,
-  name,
-  designation,
-  company,
-  image,
-}) => (
-  <motion.div
-    variants={fadeIn("", "spring", index * 0.5, 0.75)}
-    className='bg-black-200 p-10 rounded-3xl xs:w-[320px] w-full'
-  >
-    <p className='text-white font-black text-[48px]'>"</p>
-
-    <div className='mt-1'>
-      <p className='text-white tracking-wider text-[18px]'>{testimonial}</p>
-
-      <div className='mt-7 flex justify-between items-center gap-1'>
-        <div className='flex-1 flex flex-col'>
-          <p className='text-white font-medium text-[16px]'>
-            <span className='blue-text-gradient'>@</span> {name}
-          </p>
-          <p className='mt-1 text-secondary text-[12px]'>
-            {designation} of {company}
-          </p>
-        </div>
-
-        <img
-          src={image}
-          alt={`feedback_by-${name}`}
-          className='w-10 h-10 rounded-full object-cover'
-        />
-      </div>
-    </div>
-  </motion.div>
-);
-
-const Feedbacks = () => {
+export default function Feedbacks() {
   return (
-    <div className={`mt-12 bg-black-100 rounded-[20px]`}>
-      <div
-        className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[300px]`}
-      >
-        <motion.div variants={textVariant()}>
-          <p className={styles.sectionSubText}>What others say</p>
-          <h2 className={styles.sectionHeadText}>Testimonials.</h2>
-        </motion.div>
-      </div>
-      <div className={`-mt-20 pb-14 ${styles.paddingX} flex flex-wrap gap-7`}>
-        {testimonials.map((testimonial, index) => (
-          <FeedbackCard key={testimonial.name} index={index} {...testimonial} />
-        ))}
-      </div>
-    </div>
-  );
-};
+    <section id="testimonials" className="px-16 py-[120px] bg-bg2 max-[900px]:px-6 max-[900px]:py-20">
+      <FadeIn>
+        <SectionHeader num="05" title="TESTIMONIALS" />
+      </FadeIn>
 
-export default SectionWrapper(Feedbacks, "");
+      <FadeIn delay={1}>
+        <div className="grid grid-cols-[repeat(auto-fill,minmax(320px,1fr))] gap-px bg-white/[0.06] max-[900px]:grid-cols-1">
+          {testimonials.map((t, i) => (
+            <div key={i} className="bg-bg2 p-10 transition-colors duration-200 hover:bg-bg3">
+              <span className="font-display text-[5rem] text-red leading-[0.6] opacity-50 mb-5 block">"</span>
+              <p className="text-[0.92rem] text-gray leading-[1.85] mb-7 italic">{t.testimonial}</p>
+              <div className="flex items-center gap-[14px]">
+                <img
+                  src={t.image}
+                  alt={t.name}
+                  className="w-11 h-11 rounded-full object-cover border-2 border-red"
+                  loading="lazy"
+                />
+                <div>
+                  <div className="font-mono-jet text-[0.78rem] text-snow tracking-[1px]">{t.name}</div>
+                  <div className="text-[0.75rem] text-gray mt-[3px]">{t.designation}</div>
+                  <div className="text-[0.75rem] text-gray mt-[3px]">{t.company}</div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </FadeIn>
+    </section>
+  );
+}

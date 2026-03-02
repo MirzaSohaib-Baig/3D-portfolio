@@ -5,12 +5,15 @@ import {
   web,
   reactjs,
   redux,
+  html,
+  css,
+  javascript,
   tailwind,
   nodejs,
   mongodb,
   figma,
   docker,
-  dimensionalsys,
+  ds,
   dequetech,
   vapourai,
   python,
@@ -30,8 +33,24 @@ import {
   haris,
   rimmel,
 } from "../assets";
+import { SiUpwork } from "react-icons/si";
+import { TbBrandFiverr } from "react-icons/tb";
+import { FaGithub, FaLinkedinIn, FaBriefcase  } from "react-icons/fa";
+import { MdMail } from "react-icons/md";
 
-export const navLinks = [
+const contactLinks = [
+  { icon: MdMail, 
+    label: "sohaibbaig329@gmail.com",
+    href: "mailto:sohaibbaig329@gmail.com" },
+  { icon: FaGithub,
+    label: "github.com/MirzaSohaib-Baig",
+    href: "https://github.com/MirzaSohaib-Baig" },
+  { icon: FaLinkedinIn,
+    label: "linkedin/mirzasohaibbaig",
+    href: "https://linkedin.com/in/mirzasohaibbaig" },
+];
+
+const navLinks = [
   {
     id: "about",
     title: "About",
@@ -46,22 +65,60 @@ export const navLinks = [
   },
 ];
 
+const footer = [
+  {
+    id: "github",
+    title: "GitHub",
+    link: "https://github.com/MirzaSohaib-Baig",
+    icon: FaGithub,
+  },
+  {
+    id: "upwork",
+    title: "Upwork",
+    link: "https://www.upwork.com/freelancers/~019fdfa581c54e6376",
+    icon: SiUpwork,
+  },
+  {
+    id: "fiverr",
+    title: "Fiverr",
+    link: "https://www.fiverr.com/users/sohaib_baig9000/seller_dashboard",
+    icon: TbBrandFiverr,
+  },
+  {
+    id: "linkedin",
+    title: "LinkedIn",
+    link: "https://www.linkedin.com/in/sohaib-baig-86983a250/",
+    icon: FaLinkedinIn,
+  },
+  {
+    id: "etech",
+    title: "Business",
+    link: "https://excel.etech.today",
+    icon: FaBriefcase,
+  },
+];
+
+
 const services = [
   {
     title: "Web Developer",
     icon: web,
+    desc: "I create responsive and visually appealing websites using React.js, Tailwind CSS, and other modern technologies to deliver seamless user experiences.",
   },
   {
     title: "React Native Developer",
     icon: mobile,
+    desc: "I build cross-platform mobile applications using React Native, ensuring smooth performance and a native-like user experience on both iOS and Android devices.",
   },
   {
     title: "Backend Developer",
     icon: backend,
+    desc: "I develop robust and scalable backend systems using Node.js, Express, and databases like MongoDB and PostgreSQL to support seamless frontend functionality.",
   },
   {
     title: "Ethical Hacker",
     icon: creator,
+    desc: "I conduct ethical hacking and penetration testing to identify vulnerabilities in web applications and systems, helping businesses enhance their security posture.",
   },
 ];
 
@@ -73,6 +130,18 @@ const technologies = [
   {
     name: "FastAPI",
     icon: fastapi,
+  },
+  {
+    name: "HTML 5",
+    icon: html,
+  },
+  {
+    name: "CSS 3",
+    icon: css,
+  },
+  {
+    name: "JavaScript",
+    icon: javascript,
   },
   {
     name: "TypeScript",
@@ -107,14 +176,14 @@ const technologies = [
     icon: wordpress,
   },
   {
-    name: "figma",
+    name: "Figma",
     icon: figma,
   },
   {
-    name: "docker",
+    name: "Docker",
     icon: docker,
   },
-  {    name: "git",
+  {    name: "Git",
     icon: git,
   },
 ];
@@ -123,7 +192,7 @@ const experiences = [
   {
     title: "Full Stack Developer",
     company_name: "Dimensional Sys",
-    icon: dimensionalsys,
+    icon: ds,
     iconBg: "#383E56",
     date: "December 2023 - September 2024",
     points: [
@@ -186,112 +255,60 @@ const testimonials = [
 const projects = [
   {
     name: "AI Psychologist",
+    num: "01",
+    tag: "Full Stack",
     description:
       "Web-based platform that has a chatbot that analyzes conversations to identify anxiety types like GAD or PTSD and provides forms to assess severity, offering users insights into their mental health.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "fastapi",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "blue-text-gradient",
-      },
-    ],
+    tech: ["React", "FastAPI", "MongoDB", "Tailwind"],
     media: [
       aipsychologist,
       aipsychologistvideo
     ],
     source_code_link: "https://github.com/MirzaSohaib-Baig",
+    live_link: "https://aipsychologist.vercel.app/",
   },
   {
     name: "Karma Aura",
+    num: "02",
+    tag: "Full Stack",
     description:
       "Karma Aura is an AI-powered content platform that lets users create and publish blogs, images, and videos across social media using OpenAI, HeyGen, and Aryshare.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "festapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "openai",
-        color: "blue-text-gradient",
-      },
-    ],
+      tech: ["React", "FastAPI", "OpenAI", "HeyGen", "Aryshare", "Tailwind"],
     media: [
       karmaaura,
       karmaauravideo
     ],
     // source_code_link: "https://github.com/MirzaSohaib-Baig",
+    live_link: "https://karmaaura.com/",
   },
   {
     name: "AI Genius",
+    num: "03",
+    tag: "Full Stack",
     description:
       "This is a Rasa-powered educational chatbot built with Next.js and Chakra UI that helps users explore top institutes, university courses, and solve basic math queries.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "rasa",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwindcss",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "chakraui",
-        color: "blue-text-gradient",
-      },
-    ],
+    tech: ["Next.js", "Rasa", "Tailwind CSS", "Chakra UI"],
     media: [
       aigenius,
       aigeniusvideo
     ],
     source_code_link: "https://github.com/MirzaSohaib-Baig",
+    live_link: "https://aigenius.vercel.app/",
   },
   {
     name: "To Clinic",
+    num: "04",
+    tag: "Frontend",
     description:
       "T.O. Clinic is a leading orthopedic center in Karachi specializing in joint, spine, and sports injury care, with a WordPress-based website for easy appointments and treatment info.",
-    tags: [
-      {
-        name: "wordpress",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "elementor",
-        color: "green-text-gradient",
-      },
-      {
-        name: "frontend",
-        color: "pink-text-gradient",
-      },
-    ],
+    tech: ["WordPress", "Elementor", "Frontend"],
     media: [
       toclinic,
       toclinicvideo
     ],
     // source_code_link: "https://github.com/MirzaSohaib-Baig",
+    live_link: "https://toclinic.net/",
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { contactLinks, navLinks, footer, services, technologies, experiences, testimonials, projects };

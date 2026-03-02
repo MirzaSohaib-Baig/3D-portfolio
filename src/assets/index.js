@@ -30,6 +30,7 @@ import wordpress from "./tech/wordpress.png";
 // import starbucks from "./company/starbucks.png";
 // import tesla from "./company/tesla.png";
 import dimensionalsys from "./company/dimensionalsys.png";
+import ds from "./company/ds.png";
 import dequetech from "./company/dequetech.png";
 import vapourai from "./company/vapourai.png";
 
@@ -79,6 +80,7 @@ export {
   dimensionalsys,
   dequetech,
   vapourai,
+  ds,
   // tesla,
   carrent,
   jobit,

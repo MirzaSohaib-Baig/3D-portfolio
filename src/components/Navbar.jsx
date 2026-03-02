@@ -1,84 +1,66 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-
-import { styles } from "../styles";
+import { useState } from "react";
 import { navLinks } from "../constants";
-import { logo, menu, close } from "../assets";
+import { useActiveSection } from "../hooks";
 
-const Navbar = () => {
-  const [active, setActive] = useState("");
-  const [toggle, setToggle] = useState(false);
+export default function Navbar() {
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const activeSection = useActiveSection(navLinks);
 
   return (
-    <nav
-      className={`${
-        styles.paddingX
-      } w-full flex items-center py-5 fixed top-0 z-20 bg-transparent backdrop-blur-md`}
-    >
-      <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
-        <Link
-          to='/'
-          className='flex items-center gap-2'
-          onClick={() => {
-            setActive("");
-            window.scrollTo(0, 0);
-          }}
+    <>
+      <nav className="fixed top-0 left-0 right-0 z-[200] flex justify-between items-center px-16 py-[22px] bg-gradient-to-b from-bg/[0.96] to-transparent backdrop-blur-sm max-[900px]:px-6">
+        {/* Logo */}
+        <div
+          className="font-display text-2xl tracking-[4px] text-snow cursor-pointer"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
-          <img src={logo} alt='logo' className='w-10 h-10 object-contain' />
-          <p className='text-white text-[18px] font-bold cursor-pointer flex '>
-            Sohaib &nbsp;
-            <span className='sm:block hidden'> | Full Stack Developer</span>
-          </p>
-        </Link>
+          MSB<span className="text-red">.</span>
+        </div>
 
-        <ul className='list-none hidden sm:flex flex-row gap-10'>
-          {navLinks.map((nav) => (
-            <li
-              key={nav.id}
-              className={`${
-                active === nav.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(nav.title)}
-            >
-              <a href={`#${nav.id}`}>{nav.title}</a>
+        {/* Desktop links */}
+        <ul className="hidden sm:flex gap-9 list-none">
+          {navLinks.map((n) => (
+            <li key={n.id}>
+              <a
+                href={`#${n.id}`}
+                className={`font-mono-jet text-[0.72rem] tracking-[2px] uppercase no-underline transition-colors duration-200 ${
+                  activeSection === n.id ? "text-red" : "text-gray hover:text-red"
+                }`}
+              >
+                {n.title}
+              </a>
             </li>
           ))}
         </ul>
 
-        <div className='sm:hidden flex flex-1 justify-end items-center'>
-          <img
-            src={toggle ? close : menu}
-            alt='menu'
-            className='w-[28px] h-[28px] object-contain'
-            onClick={() => setToggle(!toggle)}
-          />
+        {/* Mobile toggle */}
+        <button
+          className="sm:hidden flex items-center justify-center w-9 h-9 border border-white/[0.06] bg-transparent text-snow text-lg cursor-pointer"
+          onClick={() => setMobileOpen((v) => !v)}
+          aria-label="Toggle menu"
+        >
+          {mobileOpen ? "✕" : "☰"}
+        </button>
+      </nav>
 
-          <div
-            className={`${
-              !toggle ? "hidden" : "flex"
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
-          >
-            <ul className='list-none flex justify-end items-start flex-1 flex-col gap-4'>
-              {navLinks.map((nav) => (
-                <li
-                  key={nav.id}
-                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                    active === nav.title ? "text-white" : "text-secondary"
-                  }`}
-                  onClick={() => {
-                    setToggle(!toggle);
-                    setActive(nav.title);
-                  }}
+      {/* Mobile drawer */}
+      {mobileOpen && (
+        <div className="fixed top-[68px] left-0 right-0 z-[199] bg-bg/[0.97] px-6 py-6 backdrop-blur-lg sm:hidden">
+          <ul className="list-none flex flex-col gap-5">
+            {navLinks.map((n) => (
+              <li key={n.id}>
+                <a
+                  href={`#${n.id}`}
+                  onClick={() => setMobileOpen(false)}
+                  className="no-underline text-gray font-mono-jet text-[0.85rem] tracking-[2px] uppercase"
                 >
-                  <a href={`#${nav.id}`}>{nav.title}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
+                  {n.title}
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
-      </div>
-    </nav>
+      )}
+    </>
   );
-};
-
-export default Navbar;
+}

@@ -5,21 +5,33 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#050816",
-        secondary: "#aaa6c3",
-        tertiary: "#151030",
-        "black-100": "#100d25",
-        "black-200": "#090325",
-        "white-100": "#f3f3f3",
+        bg:    "#070707",
+        bg2:   "#0d0d0d",
+        bg3:   "#141414",
+        red:   "#e01a2d",
+        red2:  "#b8101f",
+        gray:  "#777777",
+        snow:  "#f0f0f0",
+      },
+      fontFamily: {
+        display: ["'Bebas Neue'", "sans-serif"],
+        body:    ["'Sora'", "sans-serif"],
+        mono:    ["'JetBrains Mono'", "monospace"],
+      },
+      fontSize: {
+        "hero": "clamp(5rem, 11vw, 9.5rem)",
+        "sec":  "clamp(2.5rem, 4vw, 3.5rem)",
       },
       boxShadow: {
-        card: "0px 35px 120px -15px #211e35",
+        "red":    "0 0 36px rgba(224,26,45,0.22)",
+        "red-sm": "0 0 14px rgba(224,26,45,0.22)",
+        "card":   "0 20px 50px rgba(0,0,0,0.5)",
       },
-      screens: {
-        xs: "450px",
+      borderColor: {
+        subtle: "rgba(255,255,255,0.06)",
       },
       backgroundImage: {
-        "hero-pattern": "url('/src/assets/herobg.png')",
+        "red-gradient": "linear-gradient(to right, #b8101f, #e01a2d)",
       },
     },
   },

@@ -1,33 +1,30 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { logo } from "../assets";
-import { SiUpwork } from "react-icons/si";
-import { TbBrandFiverr } from "react-icons/tb";
-import { FaGithub, FaLinkedinIn, FaBriefcase  } from "react-icons/fa";
+import { footer } from "../constants";
 
-const Footer = () => {
+export default function Footer() {
   return (
-    <footer className="bg-transparent backdrop-blur-md text-white py-8 px-4 border-t border-white/10">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+    <footer className="border-t border-white/[0.06] px-16 py-9 flex justify-between items-center flex-wrap gap-4 max-[900px]:px-6 max-[900px]:flex-col max-[900px]:text-center">
+      <div className="font-display text-[1.3rem] tracking-[4px] text-snow">
+        MSB<span className="text-red">.</span>
+      </div>
 
-        {/* Logo + Name */}
-        <div className="flex items-center gap-3">
-          <img src={logo} alt="logo" className="w-10 h-10 object-contain" />
-          <h2 className="text-xl font-semibold">Sohaib | Full Stack Developer</h2>
-        </div>
+      <div className="flex gap-6">
+        {footer.map((l) => (
+          <a
+            key={l.title}
+            href={l.link}
+            target={l.link.startsWith("http") ? "_blank" : undefined}
+            rel="noreferrer"
+            className="text-[#3a3a3a] font-mono-jet text-[0.62rem] tracking-[1px] no-underline transition-colors duration-200 hover:text-red"
+          >
+            {/* {l.icon && <l.icon className="inline-block mr-1" />} */}
+            {l.title}
+          </a>
+        ))}
+      </div>
 
-        {/* Connect Icons */}
-        <div className="flex space-x-5 text-xl text-secondary">
-          <Link to="https://github.com/MirzaSohaib-Baig" target="_blank" rel="noopener" className="hover:text-white transition"><FaGithub /></Link>
-          <Link to="https://www.upwork.com/freelancers/~019fdfa581c54e6376" target="_blank" rel="noopener" className="hover:text-white transition"><SiUpwork /></Link>
-          <Link to="https://www.fiverr.com/users/sohaib_baig9000/seller_dashboard" target="_blank" rel="noopener" className="hover:text-white transition"><TbBrandFiverr /></Link>
-          <Link to="https://www.linkedin.com/in/sohaib-baig-86983a250/" target="_blank" rel="noopener" className="hover:text-white transition"><FaLinkedinIn /></Link>
-          <Link to="https://excel.etech.today" target="_blank" rel="noopener" className="hover:text-white transition"><FaBriefcase  /></Link>
-        </div>
-
+      <div className="font-mono-jet text-[0.62rem] text-[#3a3a3a] tracking-[1px]">
+        © 2025 Mirza Sohaib Baig
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}
