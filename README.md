@@ -113,7 +113,7 @@ import {
   figma,
   docker,
   dimensionalsys,
-  dequetech,
+  xersol,
   vapourai,
   python,
   fastapi,
@@ -233,8 +233,8 @@ const experiences = [
   },
   {
     title: "Full Stack Developer",
-    company_name: "Deque Tech",
-    icon: dequetech,
+    company_name: "Xersol",
+    icon: xersol,
     iconBg: "#E6DEDD",
     date: "October 2024 - Present",
     points: [

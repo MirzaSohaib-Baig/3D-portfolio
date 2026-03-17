@@ -31,7 +31,7 @@ import wordpress from "./tech/wordpress.png";
 // import tesla from "./company/tesla.png";
 import dimensionalsys from "./company/dimensionalsys.png";
 import ds from "./company/ds.png";
-import dequetech from "./company/dequetech.png";
+import xersol from "./company/xersol.png";
 import vapourai from "./company/vapourai.png";
 
 import carrent from "./carrent.png";
@@ -78,7 +78,7 @@ export {
   // shopify,
   // starbucks,
   dimensionalsys,
-  dequetech,
+  xersol,
   vapourai,
   ds,
   // tesla,
