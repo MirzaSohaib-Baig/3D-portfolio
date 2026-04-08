@@ -42,11 +42,13 @@ import aigenius from "./projects/aigenius.png";
 import aipsychologist from "./projects/aipsychologist.png";
 import karmaaura from "./projects/karmaaura.png";
 import toclinic from "./projects/toclinic.png";
+import venture from "./projects/venture.png";
 
 import aigeniusvideo from "./videos/aigenius.mp4";
 import aipsychologistvideo from "./videos/aipsychologist.mp4";
 import karmaauravideo from "./videos/karmaaura.mp4";
 import toclinicvideo from "./videos/toclinic.mp4";
+import venturevideo from "./videos/venture.mp4";
 
 import haris from "./clients/client 1.jpg";
 import rimmel from "./clients/client 2.jpg";
@@ -92,10 +94,12 @@ export {
   aipsychologist,
   karmaaura,
   toclinic,
+  venture,
   aigeniusvideo,
   aipsychologistvideo,
   karmaauravideo, 
   toclinicvideo,
+  venturevideo,
   haris,
   rimmel,
 };

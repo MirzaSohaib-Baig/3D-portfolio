@@ -27,6 +27,8 @@ import {
   karmaauravideo,
   toclinic,
   toclinicvideo,
+  venture,
+  venturevideo,
   git,
   typescript,
   postgresql,
@@ -309,6 +311,20 @@ const projects = [
     // source_code_link: "https://github.com/MirzaSohaib-Baig",
     live_link: "https://toclinic.net/",
   },
+  {
+    name:"Venture",
+    num: "05",
+    tag: "Full Stack",
+    description:
+      "Venture is a web-based ad campaign management system that allows users to create and manage ad campaigns, track campaign performance, and analyze campaign data.",
+    tech: ["React", "FastAPI", "PostgreSQL", "Tailwind", "Websocket"],
+    media: [
+      venture,
+      venturevideo
+    ],
+    // source_code_link: "https://github.com/MirzaSohaib-Baig",
+    // live_link: "https://venture.vercel.app/",
+  }
 ];
 
 export { contactLinks, navLinks, footer, services, technologies, experiences, testimonials, projects };
