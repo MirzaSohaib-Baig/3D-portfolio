@@ -37,6 +37,13 @@ export default function Experience() {
                   </li>
                 ))}
               </ul>
+              <div className="flex flex-wrap gap-2 mt-4">
+                {exp.tech_stack && exp.tech_stack.map((tech, k) => (
+                  <span key={k} className="text-[0.75rem] text-gray border border-white/[0.06] px-3 py-1 rounded-md">
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </div>
           ))}
         </div>

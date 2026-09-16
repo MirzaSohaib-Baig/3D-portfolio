@@ -16,6 +16,7 @@ import {
   ds,
   xersol,
   vapourai,
+  freelance,
   python,
   fastapi,
   wordpress,
@@ -192,17 +193,29 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Full Stack Developer",
-    company_name: "Dimensional Sys",
-    icon: ds,
-    iconBg: "#383E56",
-    date: "December 2023 - September 2024",
+    title: "Full Stack Developer (Self-Employed)",
+    company_name: "Freelance",
+    icon: freelance,
+    iconBg: "#E6DEDD",
+    date: "September 2024 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Design, build, and deploy custom websites and web applications for small-business clients, owning projects from requirements through launch.",
+      "Built ToClinic, a WordPress-based healthcare website with online appointment booking, streamlining patient scheduling for the clinic.",
+      "Developed browser automation tools with Selenium to cut down repetitive, manual data-entry work for clients.",
+      "Advise clients on improving their online presence and day-to-day digital workflows."
+    ]},
+  {
+    title: "Frontend Developer",
+    company_name: "Vapour AI",
+    icon: vapourai,
+    iconBg: "#383E56",
+    date: "January 2025 - March 2025",
+    points: [
+      "Built the frontend for AI Matchic, an AI-powered matchmaking platform, using HTML5, CSS3, and JavaScript.",
+      "Designed responsive, cross-device UI components and integrated them with a Flask backend.",
+      "Improved usability and layout consistency across desktop and mobile breakpoints.",
     ],
+    tech_stack: ["HTML5", "CSS3", "JavaScript", "Flask"],
   },
   {
     title: "Full Stack Developer",
@@ -211,27 +224,27 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "October 2024 - January 2025",
     points: [
-      "Contract-based full stack developer for this company.",
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      `Built Karma Aura, an AI-powered platform for generating pregnancy-related blogs and images, end-to-end`,
+      "Integrated OpenAI to auto-generate educational content, reducing the manual content-creation workload.",
+      "Built backend APIs and responsive React interfaces; integrated HeyGen and Ayrshare for AI video and automated social publishing.",
+      "Collaborated with the product team to scope and ship new features on a recurring release cycle."
     ],
+    tech_stack: ["React", "FastAPI", "OpenAI", "HeyGen", "Aryshare", "Tailwind CSS", "PostgreSQL", "Git"],
   },
   {
-    title: "Frontend Developer",
-    company_name: "Vapour AI",
-    icon: vapourai,
+    title: "Full Stack Developer",
+    company_name: "Dimensional Sys",
+    icon: ds,
     iconBg: "#383E56",
-    date: "January 2025 - March 2025",
+    date: "December 2023 - September 2024",
     points: [
-      "Contract-based frontend developer for this company.",
-      "Developing frontend web applications using HTML, CSS, and JavaScript for Flask Template.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      `Built AI Genie, an AI-powered chatbot answering stock-related queries, using React, FastAPI, and Rasa.`,
+      "Built backend APIs for retrieving live stock prices, target prices, and stock recommendations.",
+      `Contributed to Alert.js, a website uptime/downtime monitoring tool.`,
+      "Collaborated on full-stack features across React.js, FastAPI, Node.js, Express.js, PostgreSQL, MySQL, and MongoDB in an Agile, Git-based workflow",
     ],
-  },
+    tech_stack: ["React", "FastAPI", "Node.js", "Express.js", "PostgreSQL", "MySQL", "MongoDB", "Tailwind CSS", "Rasa", "Git"],
+  }
 ];
 
 const testimonials = [
@@ -266,8 +279,8 @@ const projects = [
       aipsychologist,
       aipsychologistvideo
     ],
-    source_code_link: "https://github.com/MirzaSohaib-Baig",
-    live_link: "https://aipsychologist.vercel.app/",
+    source_code_link: "https://github.com/MirzaSohaib-Baig/ADS-Project",
+    // live_link: "https://aipsychologist.vercel.app/",
   },
   {
     name: "Karma Aura",
@@ -281,7 +294,7 @@ const projects = [
       karmaauravideo
     ],
     // source_code_link: "https://github.com/MirzaSohaib-Baig",
-    live_link: "https://karmaaura.com/",
+    // live_link: "https://karmaaura.com/",
   },
   {
     name: "AI Genius",
@@ -294,8 +307,8 @@ const projects = [
       aigenius,
       aigeniusvideo
     ],
-    source_code_link: "https://github.com/MirzaSohaib-Baig",
-    live_link: "https://aigenius.vercel.app/",
+    // source_code_link: "https://github.com/MirzaSohaib-Baig",
+    // live_link: "https://aigenius.vercel.app/",
   },
   {
     name: "To Clinic",

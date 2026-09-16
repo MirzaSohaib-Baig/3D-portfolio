@@ -33,6 +33,7 @@ import dimensionalsys from "./company/dimensionalsys.png";
 import ds from "./company/ds.png";
 import xersol from "./company/xersol.png";
 import vapourai from "./company/vapourai.png";
+import freelance from "./company/freelance.png";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -83,6 +84,7 @@ export {
   xersol,
   vapourai,
   ds,
+  freelance,
   // tesla,
   carrent,
   jobit,
