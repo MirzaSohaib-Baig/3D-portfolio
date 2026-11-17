@@ -301,14 +301,14 @@ const projects = [
     num: "03",
     tag: "Full Stack",
     description:
-      "This is a Rasa-powered educational chatbot built with Next.js and Chakra UI that helps users explore top institutes, university courses, and solve basic math queries.",
-    tech: ["Next.js", "Rasa", "Tailwind CSS", "Chakra UI"],
+      "This is a powered by FastAPI using OpenRouter educational chatbot built with Next.js and Chakra UI that helps users explore top institutes, university courses, and solve basic math queries.",
+    tech: ["Next.js", "FastAPI", "OpenRouter", "Tailwind CSS", "Chakra UI"],
     media: [
       aigenius,
       aigeniusvideo
     ],
     // source_code_link: "https://github.com/MirzaSohaib-Baig",
-    // live_link: "https://aigenius.vercel.app/",
+    live_link: "https://edu-chatbot-frontend-xi.vercel.app",
   },
   {
     name: "To Clinic",
