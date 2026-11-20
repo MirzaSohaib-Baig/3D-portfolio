@@ -301,7 +301,7 @@ const projects = [
     num: "03",
     tag: "Full Stack",
     description:
-      "This is a powered by FastAPI using OpenRouter educational chatbot built with Next.js and Chakra UI that helps users explore top institutes, university courses, and solve basic math queries.",
+    "AI Genius is a chatbot backend and web app that helps students learn. It explains concepts, solves problems step by step, builds curricula and study plans, gives course and institute guidance, and runs interactive multiple-choice quizzes. It started as a Rasa project with fixed intents and canned answers. I rebuilt it around an LLM served through OpenRouter, so it can answer open-ended questions.",
     tech: ["Next.js", "FastAPI", "OpenRouter", "Tailwind CSS", "Chakra UI"],
     media: [
       aigenius,
